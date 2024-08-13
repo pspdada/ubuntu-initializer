@@ -26,6 +26,8 @@ function main() {
 
     installNvidiaDriver # install Nvidia driver
 
+    installPythonPackages # install python packages
+
     sudo apt-get update -y && sudo apt-get upgrade -y # update and upgrade
 
     sudo timedatectl set-timezone Asia/Shanghai # setup Timezone
