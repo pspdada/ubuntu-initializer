@@ -48,7 +48,3 @@ This setup script won't work on the version before Ubuntu 24.04 since before Ubu
 ## Acknowledgments
 
 The `.vimrc` file was copied from https://github.com/missing-semester/missing-semester.
-
-## License
-
-All the contents in this course, including the website source code, lecture notes, exercises, and lecture videos are licensed under Attribution-NonCommercial-ShareAlike 4.0 International [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/). See [here](https://missing.csail.mit.edu/license) for more information on contributions or translations.
