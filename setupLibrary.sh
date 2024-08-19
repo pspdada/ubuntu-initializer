@@ -16,8 +16,8 @@ function installCommonPackages() {
 
     sudo apt-get install -y curl wget git vim htop ssh tmux python3 python3-pip fd-find nodejs npm
     sudo npm install -g tldr
-    git config --global http.proxy socks5://127.0.0.1:7890
-    git config --global https.proxy socks5://127.0.0.1:7890
+    git config --global http.proxy socks5h://127.0.0.1:7890
+    git config --global https.proxy socks5h://127.0.0.1:7890
     git config --global credential.helper store
 
     echo "Common packages installed"
@@ -79,7 +79,7 @@ function installPythonPackages() {
     echo "Installing python packages"
 
     sudo python3 -m pip install --user pipx
-    python3 -m pipx ensurepath
+    python3 -m pipx ensurepath # add pipx to PATH
     pipx install poetry
     pipx upgrade poetry
 
