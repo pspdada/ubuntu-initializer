@@ -19,4 +19,4 @@ alias up="cd .."
 alias fd="fdfind"
 alias find="fdfind"
 alias df="df -h"
-
+alias nv="nvidia-smi"
