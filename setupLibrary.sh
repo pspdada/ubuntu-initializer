@@ -5,7 +5,7 @@ function changeRepos() {
 
     sudo cp /etc/apt/sources.list.d/ubuntu.sources /etc/apt/sources.list.d/ubuntu.sources.bak
     echo '' | sudo tee /etc/apt/sources.list.d/ubuntu.sources >/dev/null
-    sudo cat sources_tsinghua | sudo tee /etc/apt/sources.list.d/ubuntu.sources >/dev/null
+    sudo cat ./tsinghua_sources/deb_sources | sudo tee /etc/apt/sources.list.d/ubuntu.sources >/dev/null
 
     echo "Repository changed to Tsinghua mirror"
 }
@@ -16,9 +16,14 @@ function installCommonPackages() {
 
     sudo apt-get install -y curl wget git vim htop ssh tmux python3 python3-pip fd-find nodejs npm
     sudo npm install -g tldr
-    git config --global http.proxy socks5h://127.0.0.1:7890
-    git config --global https.proxy socks5h://127.0.0.1:7890
-    git config --global credential.helper store
+    git config --global http.proxy http://127.0.0.1:7890
+    git config --global https.proxy http://127.0.0.1:7890
+    git config --global credential.helper store # store git credentials
+
+    # change pip source
+    # pip install -i https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple some-package # for temporary use
+    python -m pip install -i https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple --upgrade pip
+    pip config set global.index-url https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple
 
     echo "Common packages installed"
 }

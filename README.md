@@ -3,8 +3,9 @@
 This is a setup script to automate the setup and provisioning of Ubuntu servers. It does the following:
 
 - Change default repository to Tsinghua Ubuntu Mirror
-- Setup the timezone for the server (Default to "Asia/Jakarta")
-- Update and upgrade server for first time
+- Setup the timezone for the server
+- Update and upgrade the packages on Ubuntu
+- Install some basic packages
 
 ## Installation
 
