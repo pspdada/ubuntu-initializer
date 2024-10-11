@@ -56,6 +56,12 @@ bash Anaconda3-2024.06-1-Linux-x86_64.sh
 conda init
 ```
 
+如果此时找不到 `conda` 命令，可以使用以下命令：
+
+```bash
+/your/path/to/anaconda3/bin/conda init
+```
+
 #### 配置镜像源
 
 1. 将 `~/.condarc` 中的内容替换为以下内容
@@ -71,7 +77,6 @@ default_channels:
 custom_channels:
   conda-forge: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
   pytorch: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
-
 ```
 
 2. 使用下列指令测试是否配置成功
@@ -103,9 +108,9 @@ nvidia-smi
 # We use pytorch 2.4.0 for vllm
 # We needn't to install cuda and cudnn since they are installed automatically by torch
 # if cuda version is 12.1
-pip install torch==2.4.0 torchvision==0.19.0 torchaudio==2.4.0 --index-url https://download.pytorch.org/whl/cu121 -y
+pip install torch==2.4.0 torchvision==0.19.0 torchaudio==2.4.0 --index-url https://download.pytorch.org/whl/cu121
 # elif cuda version is 12.4
-pip install torch==2.4.0 torchvision==0.19.0 torchaudio==2.4.0 --index-url https://download.pytorch.org/whl/cu124 -y
+pip install torch==2.4.0 torchvision==0.19.0 torchaudio==2.4.0 --index-url https://download.pytorch.org/whl/cu124 
 ```
 
 3. 安装 VLLM：
