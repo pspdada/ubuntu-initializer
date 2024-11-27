@@ -33,19 +33,20 @@ ssh user@remote_host 'cat ~/.ssh/authorized_keys'
 
 1. 下载最新的 `Anaconda3` 安装包
 
-- 从 `https://repo.anaconda.com/archive/` 下载
-- 或者从清华镜像源 `https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/` 下载
+- 从 `https://repo.anaconda.com/archive/`
+- 或者从清华镜像源 `https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/`
+- 或者从哈工深镜像源 `https://mirrors.osa.moe/anaconda/archive/Anaconda3-2024.10-1-Linux-x86_64.sh` 下载
 
-2. 使用 `curl` 命令下载安装包
+1. 使用 `curl` 命令下载安装包
 
 ```bash
-curl -O https://repo.anaconda.com/archive/Anaconda3-2024.06-1-Linux-x86_64.sh
+curl -O https://mirrors.osa.moe/anaconda/archive/Anaconda3-2024.10-1-Linux-x86_64.sh
 ```
 
 3. 使用 `bash` 命令执行安装包
 
 ```bash
-bash Anaconda3-2024.06-1-Linux-x86_64.sh
+bash Anaconda3-2024.10-1-Linux-x86_64.sh
 ```
 
 #### 配置环境变量
@@ -110,7 +111,7 @@ nvidia-smi
 # if cuda version is 12.1
 pip install torch==2.4.0 torchvision==0.19.0 torchaudio==2.4.0 --index-url https://download.pytorch.org/whl/cu121
 # elif cuda version is 12.4
-pip install torch==2.4.0 torchvision==0.19.0 torchaudio==2.4.0 --index-url https://download.pytorch.org/whl/cu124 
+pip install torch==2.4.0 torchvision==0.19.0 torchaudio==2.4.0 --index-url https://download.pytorch.org/whl/cu124
 ```
 
 3. 安装 VLLM：
