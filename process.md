@@ -5,7 +5,7 @@
 1. In the local machine, generate the ssh key pair in the directory `~/.ssh/`:
 
 ```bash
-ssh keygen
+ssh-keygen
 ```
 
 2. In the remote machine, create the directory `~/.ssh/` and the file `~/.ssh/authorized_keys`:
