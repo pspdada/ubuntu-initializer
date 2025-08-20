@@ -21,15 +21,15 @@ exec ~/bin/zsh -l
 
 ## 添加别名
 
-将 .aliases 文件复制到 `~` 文件夹中，然后：
+将本项目中的 `.aliases` 文件复制到 `~` 文件夹中，然后添加进 `~/.zshrc`：
 
 ```bash
-echo '[[ ! -f ~/.aliases ]] || source ~/.aliases' >>~/.zshrc
+echo '[[ ! -f ~/.aliases ]] || source ~/.aliases' >> ~/.zshrc
 ```
 
 ## 安装 Powerlevel10k
 
-将 .p10k.zsh 文件复制到 `~/.zsh/` 文件夹中，然后：
+将本项目中的 `.p10k.zsh` 文件复制到 `~/.zsh/` 文件夹中，然后：
 
 ```bash
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.zsh/powerlevel10k
@@ -37,6 +37,8 @@ echo 'source ~/.zsh/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 echo '[[ ! -f ~/.zsh/.p10k.zsh ]] || source ~/.zsh/.p10k.zsh' >>~/.zshrc
 ```
+
+在配置完成后，如果希望重新配置，重启整个流程，直接执行 `p10k configure` ，会重新打开配置向导
 
 ## 安装 zsh-autosuggestions
 
