@@ -42,6 +42,8 @@ echo '[[ ! -f ~/.zsh/.p10k.zsh ]] || source ~/.zsh/.p10k.zsh' >>~/.zshrc
 
 ## 安装 zsh-autosuggestions
 
+Repo: [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
+
 ```bash
 git clone --depth=1 https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
 echo 'source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh' >>~/.zshrc
@@ -49,7 +51,7 @@ echo 'source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh' >>~/.zshrc
 
 ## 安装 zsh-syntax-highlighting
 
-The repo is [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
+Repo: [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
 
 ```bash
 git clone --depth=1 https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.zsh/zsh-syntax-highlighting
