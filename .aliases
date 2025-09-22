@@ -23,11 +23,17 @@ alias nv="nvidia-smi"
 alias jobs="jobs -l"
 alias start="nohup python3 main.py&"
 alias python="python3"
+alias del="rm"
 
-function noproxy {
+function proxyoff {
     export http_proxy=""
     export https_proxy=""
     git config --global --unset http.proxy
     git config --global --unset https.proxy
     echo "Proxy settings cleared."
+}
+
+function tbhere {
+    echo "TensorBoard at http://0.0.0.0:80/ (Press CTRL+C to quit)"
+    tensorboard --logdir ./ --host 0.0.0.0 --port 80 > /dev/null 2>&1
 }
