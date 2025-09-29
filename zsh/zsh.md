@@ -2,10 +2,12 @@
 
 ### 从源安装（配合 vscode 十分方便）
 
+[官网下载链接](https://zsh.sourceforge.io/Arc/source.html)
+
 ```bash
 cd ~
-wget -Oc zsh.tar.xz https://sourceforge.net/projects/zsh/files/latest/download
-mkdir zsh && unxz zsh.tar.xz && tar -xvf zsh.tar -C zsh --strip-components 1
+wget -O zsh-5.9.tar.xz https://sourceforge.net/projects/zsh/files/zsh/5.9/zsh-5.9.tar.xz/download
+mkdir zsh && unxz zsh*.tar.xz && tar -xvf zsh*.tar -C zsh --strip-components 1
 cd zsh
 # compile zsh
 ./configure --prefix=$HOME
